@@ -48,6 +48,7 @@ void first_child_process(t_pipex pipex, char *argv[], char *envp[])
 {
     dup2(pipex.fd[1], 1);
     close(pipex.fd[0]); 
+    dup2(pipex.infile, 0);
     pipex.cmd_arg = ft_split(argv[2], ' ');
     pipex.cmd = get_command(pipex.cmd_path, pipex.cmd_arg[0]);
     if (!pipex.cmd)
@@ -63,7 +64,8 @@ void first_child_process(t_pipex pipex, char *argv[], char *envp[])
 void second_child_process(t_pipex pipex, char *argv[], char *envp[])
 {
     dup2(pipex.fd[0], 0);
-    close(pipex.fd[1]); 
+    close(pipex.fd[1]);
+    dup2(pipex.outfile, 1);
     pipex.cmd_arg = ft_split(argv[3], ' ');
     pipex.cmd = get_command(pipex.cmd_path, pipex.cmd_arg[0]);
     if (!pipex.cmd)
