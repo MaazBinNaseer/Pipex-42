@@ -25,17 +25,6 @@ RETURN VALUES
 
 #include "pipex.h"
 
-size_t	ft_strlen(const char *c)
-{
-	size_t	l;
-
-	l = 0;
-	while (c[l] != '\0')
-	{
-		l++;
-	}
-	return (l);
-}
 
 // int main()
 // {

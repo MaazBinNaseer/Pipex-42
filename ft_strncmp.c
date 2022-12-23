@@ -29,24 +29,7 @@ RETURN VALUES
 	 so that `\200' is greater than `\0'.
 */
 
-#include "pipex.h"
 
-int	ft_strncmp(const char *s1, const char *s2, size_t num)
-{
-	size_t			i;
-	unsigned char	*ptr1;
-	unsigned char	*ptr2;
-
-	ptr1 = (unsigned char *)s1;
-	ptr2 = (unsigned char *)s2;
-	i = 0;
-	if (num == 0)
-		return (0);
-	while ((i < num - 1) && (ptr1[i] != '\0' && ptr2[i] != '\0')
-		&& (ptr1[i] == ptr2[i]))
-		i++;
-	return (ptr1[i] - ptr2[i]);
-}
 
 // int main()
 // {

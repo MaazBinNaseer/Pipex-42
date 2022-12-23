@@ -43,9 +43,9 @@ int main(int argc, char *argv[], char *envp[])
     }
     if(pipex.outfile > 0)
     {
-        pipex.pid2 = fork();
-    if(pipex.pid2 == 0)
-        second_child_process(pipex, argv, envp);
+        pipex.pid2 = fork(); 
+        if(pipex.pid2 == 0)
+            second_child_process(pipex, argv, envp);
     }
     close_pipes(&pipex);
     waitpid(pipex.pid1, NULL, 0);
@@ -53,4 +53,5 @@ int main(int argc, char *argv[], char *envp[])
     free_parent(&pipex);
     exit(WEXITSTATUS(pointer));
     return (0);
+    
 }
