@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: mbin-nas<mbin-nas@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/01 18:32:00 by mbin-nas          #+#    #+#             */
-/*   Updated: 2022/11/12 20:57:25 by marvin           ###   ########.fr       */
+/*   Updated: 2022/11/12 20:57:25 by mbin-nas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,17 +87,16 @@ char	**ft_split(char const *str, char c)
 	return (ft_split2(str, c, mem));
 }
 
-// int main()
-// {
-//     char *str="\0aa\0bbb" ,c='\0';
-//     // char str1[]= "*this*is*my*****string";
-//     char **ptr = ft_split(str, c);
-//     printf("-------------------------------\n");
-//     printf("The value of the count is: %zu\n", ft_readwords(str, 'p'));
-//     printf("-------------------------------\n");
-//     printf("The value of the count is: %zu\n", ft_wordlen(str, 'p'));
-//     printf("-------------------------------\n");
-//     printf("Printing a split\n");
-//     printf("%c\n", **ptr);
-//     return (0);
-// }
+int		main(void)
+{
+	int i = 0;
+	char **tab;
+		
+	tab = ft_split("bonjour je m'appel Arthur", ' ');
+	while (i < 4)
+	{
+		printf("string %d : %s\n", i, tab[i]);
+		i++;
+	}
+	return (0);
+}

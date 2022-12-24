@@ -48,11 +48,9 @@ typedef struct pipex
 
 //// Pipex functions 
 char *get_command(char **path, char *cmd);
-char *find_path(char **envp);
 void first_child_process(t_pipex pipex, char *argv[], char *envp[]);
 void second_child_process(t_pipex pipex, char *argv[], char *envp[]);
 void close_pipes (t_pipex *pipex);
-
 
 void free_parent(t_pipex *pipex);
 void free_childs(t_pipex *pipex);
@@ -63,6 +61,7 @@ char	**ft_split(char const *str, char c);
 char	*ft_strjoin(char const *str1, char const *str2);
 int	    ft_strncmp(const char *s1, const char *s2, size_t num);
 size_t	ft_strlen(const char *c);
+char			*ft_substr(char const *s, unsigned int start, size_t len);
 
 //! Error messages 
 int message_error(char *error);

@@ -13,7 +13,8 @@
 #include "pipex.h"
 
 //? Getting the command from the prompt  
-char *get_command(char **path, char *cmd){
+char *get_command(char **path, char *cmd)
+{
     char *temp;
     char *get_command;
 
@@ -29,10 +30,8 @@ char *get_command(char **path, char *cmd){
         free(get_command);
         path++;
     }
-    
-    return (NULL); //! if nothing happens return Null to me 
+    return (NULL); 
 }
-
 
 
 /* ------------ Creating a Child process function -------------
