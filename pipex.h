@@ -20,7 +20,7 @@
 #include <fcntl.h>
 #include <stdio.h>
 #include <sys/wait.h>
-
+#include <stdbool.h>
 
 //? Error Files handling 
 #define ERR_INFILE "Infile" 
@@ -28,7 +28,7 @@
 #define ERR_INPUT "Invalid number of arguments.\n"
 #define ERR_PIPE "Pipe"
 #define ERR_CMD "Command not found\n"
-
+#define ERR_PATH "Path not found\n"
 
 
 //// Struct definintion 

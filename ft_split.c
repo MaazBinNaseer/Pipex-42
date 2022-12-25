@@ -87,16 +87,16 @@ char	**ft_split(char const *str, char c)
 	return (ft_split2(str, c, mem));
 }
 
-int		main(void)
-{
-	int i = 0;
-	char **tab;
+// int		main(void)
+// {
+// 	int i = 0;
+// 	char **tab;
 		
-	tab = ft_split("bonjour je m'appel Arthur", ' ');
-	while (i < 4)
-	{
-		printf("string %d : %s\n", i, tab[i]);
-		i++;
-	}
-	return (0);
-}
+// 	tab = ft_split("bonjour je m'appel Arthur", ' ');
+// 	while (i < 4)
+// 	{
+// 		printf("string %d : %s\n", i, tab[i]);
+// 		i++;
+// 	}
+// 	return (0);
+// }
