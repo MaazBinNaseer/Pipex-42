@@ -9,7 +9,7 @@ int	ft_strncmp(const char *s1, const char *s2, size_t num)
 	ptr1 = (unsigned char *)s1;
 	ptr2 = (unsigned char *)s2;
 	i = 0;
-	if (num == 0)
+	if (num == 0 || ptr2 == NULL)
 		return (0);
 	while ((i < num - 1) && (ptr1[i] != '\0' && ptr2[i] != '\0')
 		&& (ptr1[i] == ptr2[i]))
@@ -53,9 +53,12 @@ char	*ft_strjoin(char const *str1, char const *str2)
 
 char *find_path(char **envp)
 {	
-	while(ft_strncmp("PATH=", *envp, 5))
-        {
-			envp++;
-		}
-	return (*envp + 5);
+	  if (envp) {
+        while (*envp) {
+            if (ft_strncmp("PATH=", *envp, 5) == 0)
+                return (*envp + 5);
+            envp++;
+        }
+    }
+    return 0;
 }

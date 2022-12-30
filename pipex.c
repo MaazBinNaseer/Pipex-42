@@ -27,6 +27,11 @@ int main(int argc, char *argv[], char *envp[])
     if(pipe(pipex.fd) < 0)
         message_error(ERR_PIPE);
     pipex.path = find_path(envp);
+    if(pipex.path == 0)
+        {
+            message_error(ERR_PATH);
+            return (0) ; 
+        }
     pipex.cmd_path = ft_split(pipex.path, ':');
     if(pipex.infile > 0)
     {
@@ -46,5 +51,4 @@ int main(int argc, char *argv[], char *envp[])
     free_parent(&pipex);
     exit(WEXITSTATUS(pointer));
     return (0);
-    
 }

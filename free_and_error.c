@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 #include "pipex.h"
 
-// ?---------------- FREE THE CHILDS AND THE PARENTS 
+// ?---------------- FREE EVERYTHING AND THE PARENTS 
 void free_parent(t_pipex *pipex)
 {
     int i;

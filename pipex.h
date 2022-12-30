@@ -21,15 +21,15 @@
 #include <stdio.h>
 #include <sys/wait.h>
 #include <stdbool.h>
+#include <string.h>
 
 //? Error Files handling 
-#define ERR_INFILE "Infile" 
-#define ERR_OUTFILE "Outfile"
+#define ERR_INFILE "Infile Error\n" 
+#define ERR_OUTFILE "Outfile Error\n"
 #define ERR_INPUT "Invalid number of arguments.\n"
-#define ERR_PIPE "Pipe"
+#define ERR_PIPE "Pipe Error\n"
 #define ERR_CMD "Command not found\n"
 #define ERR_PATH "Path not found\n"
-
 
 //// Struct definintion 
 typedef struct pipex 
@@ -59,8 +59,8 @@ char *find_path(char **envp);
 ////Libft Functions
 char	**ft_split(char const *str, char c);
 char	*ft_strjoin(char const *str1, char const *str2);
-int	    ft_strncmp(const char *s1, const char *s2, size_t num);
 size_t	ft_strlen(const char *c);
+int	ft_strncmp(const char *s1, const char *s2, size_t num);
 char			*ft_substr(char const *s, unsigned int start, size_t len);
 
 //! Error messages 
