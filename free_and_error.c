@@ -20,7 +20,7 @@ void free_parent(t_pipex *pipex)
     close(pipex->infile);
     close(pipex->outfile);
     while(pipex->cmd_path[i])
-    {
+    { 
         free(pipex->cmd_path[i]);
         i++;
     }
