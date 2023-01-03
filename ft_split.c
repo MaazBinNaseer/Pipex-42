@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mbin-nas<mbin-nas@student.42.fr>              +#+  +:+       +#+        */
+/*   By: mbin-nas <mbin-nas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/01 18:32:00 by mbin-nas          #+#    #+#             */
-/*   Updated: 2022/11/12 20:57:25 by mbin-nas          ###   ########.fr       */
+/*   Created: 2023/01/02 16:36:06 by mbin-nas          #+#    #+#             */
+/*   Updated: 2023/01/02 16:36:09 by mbin-nas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,7 +91,7 @@ char	**ft_split(char const *str, char c)
 // {
 // 	int i = 0;
 // 	char **tab;
-		
+
 // 	tab = ft_split("bonjour je m'appel Arthur", ' ');
 // 	while (i < 4)
 // 	{

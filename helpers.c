@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   helpers.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mbin-nas <mbin-nas@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/01/02 16:36:18 by mbin-nas          #+#    #+#             */
+/*   Updated: 2023/01/02 16:36:34 by mbin-nas         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "pipex.h"
 
 int	ft_strncmp(const char *s1, const char *s2, size_t num)
@@ -51,14 +63,16 @@ char	*ft_strjoin(char const *str1, char const *str2)
 	return (result);
 }
 
-char *find_path(char **envp)
-{	
-	  if (envp) {
-        while (*envp) {
-            if (ft_strncmp("PATH=", *envp, 5) == 0)
-                return (*envp + 5);
-            envp++;
-        }
-    }
-    return 0;
+char	*find_path(char **envp)
+{
+	if (envp)
+	{
+		while (*envp)
+		{
+			if (ft_strncmp("PATH=", *envp, 5) == 0)
+				return (*envp + 5);
+			envp++;
+		}
+	}
+	return (0);
 }

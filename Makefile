@@ -16,7 +16,6 @@ all: $(NAME)
 	
 clean: 
 	rm -rf $(NAME) $(OBJECTS) $(BONUS_OJS) 
-	@echo "------cleaned-----"  
 fclean: clean 
 	rm -rf $(NAME)
 	
